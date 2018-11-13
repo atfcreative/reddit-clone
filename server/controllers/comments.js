@@ -12,7 +12,7 @@ const show = (req, res) => {
     const { id } = req.params;
     Comment.findById(id, (err, comment) => {
         if (err) res.send({error: true, message: `No comment with id ${id}`});
-        res.json(contact)
+        res.json(comment)
     });
 };
 

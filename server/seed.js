@@ -24,12 +24,13 @@ var commentsData = [{
     }
     console.log('All Comments removed buddy ;)');
 
-    Comment.create(commentsData, function(err, comments) {
+    Comment.create(commentsData, function(err, newComment) {
         if (err) {
             console.log('mmmrrrrrpppt create does not compute: ', err);
             return;
         }
-        console.log('Created Success', comments.length, 'comments')
+        console.log('Created Success', newComment.length, 'comments');
+        console.log(newComment);
     
     TextPost.deleteMany({}, function(err, res) {
         if (err) {
@@ -43,20 +44,22 @@ var commentsData = [{
         content: 'Content',
         thumbnail_image_url: 'https://picsum.photos/200/300',
         votes: 12,
-        comments: [comments[0], comments[1]]
+        comments: [Comment[0], Comment[1]]
     }, {
         title: 'Moby Dick',
         content: 'The White Whale',
         thumbnail_image_url: 'https://picsum.photos/200/300',
         votes: 50,
-        comments: []
+        comments: [Comment[0], Comment[1]]
     }], function(err, posts) {
         if (err) {
             console.log('mmmrrppp errrror creating text post', err);
             return;
         }
         console.log('created', posts.length, 'posts');
+        console.log(posts);
         return;
+        
             });
         });
     });

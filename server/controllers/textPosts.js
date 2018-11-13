@@ -2,9 +2,10 @@ const db = require('../models');
 const TextPost = db.TextPost;
 
 const index = (req, res) => {
-    TextPost.find({}, (err, post) => {
+    TextPost.find({}, (err, posts) => {
         if (err) throw err;
-        res.json(TextPost);
+        res.json(posts);
+        console.log('seeded posts are:', posts);
     });
 };
 

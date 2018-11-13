@@ -1,14 +1,178 @@
-body {
-  margin: 0;
-  padding: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+/*===== layout stuuf ==========*/
+
+.row {
+  border-top: 1px solid #6099ca;
+  display: flex;
+  flex-direction: row;
+  z-index: 999;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+.col {
+  display: flex;
+  flex-direction: column;
+}
+
+/*===== homepage container stuff ==========*/
+
+.posts {
+  width: 70%;
+  padding: 0 0%;
+}
+
+aside {
+  width: 30%;
+}
+
+/*===== NAVBAR stuFf ==========*/
+
+.navbar {
+  /*border-bottom: 1px solid #6099ca;*/
+  margin: 0;
+  padding: 5px 0 0 10px;
+  background-color: #cee3f6;
+  overflow: hidden;
+}
+
+.right strong {
+  font-weight: bold;
+  color: #001f3f;
+}
+
+.right {
+  position: absolute;
+  right: 0px;
+  top: 53px;
+  font-size: 12px;
+  color: #555;
+  background-color: rgba(255, 255, 255, 0.5);
+  padding: 6px 40px 10px 15px;
+  border-radius: 5px;
+}
+
+.mb {
+  margin-bottom: -5px;
+}
+
+h6 {
+  background-color: #eff7ff;
+  color: #34679c;
+  display: block;
+  font-weight: 600;
+  font-size: 100%;
+  letter-spacing: 0.02em;
+  margin: 0px 1px 0 1px;
+  padding: 8px 10px;
+  z-index: 3;
+}
+
+h6:hover {
+  background-color: #34679c;
+  color: #fff;
+}
+
+.active {
+    background: #fff;
+    color: #ff4321; 
+    position: relative;
+    z-index: 1;
+    border-top: 1px solid #6099ca;
+    border-right: 1px solid #6099ca;
+    border-left: 1px solid #6099ca;
+    border-bottom: 1px solid #fff;
+}
+
+h6[class="active"]:hover {
+    background-color: #ff4321;
+    color: #fff;
+}
+
+
+  h6 {
+    border-radius: 0px 0px 0 0;
+    color: #001f3f; 
+    cursor: pointer;
+    display: inline-block;
+    letter-spacing: 0.02em;
+    margin: 0 1px;
+    padding: 5px 12px;
+  }
+
+  h6:hover {
+    color: #fff;
+  }
+
+  .active {
+    background: #fff;
+    color: #ff4321; 
+    position: relative;
+    z-index: 10;
+    border-bottom: 1px solid #fff;
+
+  }
+
+  h6[class="active"]:hover {
+    background-color: #fff;
+    color: #ff4321;
+  }
+
+
+/*===== single post =======
+==========================*/
+
+.votes {
+  text-align: center;
+  color: #ccc;
+}
+
+.single-post {
+  padding: 15px;
+  margin: 10px;
+  border: none;
+}
+
+.imgPost {
+  width: 70px;
+  height: 46px;
+}
+
+
+.info {
+  margin: 0 0 0 30px;
+}
+
+.single-post h1 {
+  color: #1514f4;
+  font-size: 1.1em;
+  font-weight: normal;
+  width: 100%;
+}
+
+.single-post h3 {
+  color: #ccc;
+  margin-top: 12px;
+  text-align: center;
+}
+
+.single-post small {
+  color: #555;
+  padding: 3px 0 0 0;
+  font-size: 12px;
+}
+
+.single-post strong {
+  color: #333;
+}
+
+.single-post h5 a {
+  color: #777;
+  padding: 3px 0px 0 0;
+  margin: 0px 5px 0 0;
+  font-weight: 700;
+  text-decoration: none;
+  border-bottom: none;
+  font-size: 14px;
+}
+
+.single-post h5 a:hover {
+  color: #1514f4;
 }
